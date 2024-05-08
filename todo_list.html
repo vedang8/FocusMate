@@ -61,11 +61,18 @@
         </ul>
     </div>
     <div class="container">
-        <h1>🎯Focus <span>Mate</span></h1>
-        <div id="quote-container">
-            <p id="myquote"></p>
-        </div>
+        <header>
+            <form id="new-task-form">
+                <input type="text" name="new-task-input" id="new-task-input" placeholder="What do you have planned?" />
+                <input type="submit" id="new-task-submit" value="Add task" />
+            </form>
+        </header>
+        <main>
+            <section class="task-list">
+                <h2>Tasks</h2>
+                    <div id="tasks"></div>
+            </section>
+        </main>
     </div>
     <script src="popup.js"></script>
 </body>
-</html>
