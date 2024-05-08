@@ -1,11 +1,12 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
 }
 
 .container {
+    text-align: center;
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -16,66 +17,54 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 3rem;
+    color: #2c041c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
-    color: #333;
 }
 
-h2 {
-    margin-top: 0;
-    color: #666;
+h1 span {
+    font-size: 2.5rem;
+    color: #ff4081;
 }
 
 #quote-container {
-    background-color: #f9f9f9;
+    background-color: #e7d3f1;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color: #67032f;
+    margin-bottom: 20px;
 }
+
 
 #quote {
     font-style: italic;
 }
 
-#task-input {
-    margin-bottom: 10px;
-}
-
-#task-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-#task-list li {
-    margin-bottom: 5px;
-}
-
-input[type="number"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 button {
-    display: block;
+    display: flex;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #007bff;
+    background-color: rgb(150, 22, 150);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2c041c;
+    transition: all 0.3s ease;
+    border-radius: 50px;
 }
 
 button:active {
-    background-color: #0056b3;
+    background-color: #2c041c;
     transform: translateY(1px);
 }
 
@@ -83,5 +72,11 @@ button:focus {
     outline: none;
 }
 
+#start-session-btn{
+    text-align: center;
+}
 
+#manage-todo-btn{
+    text-align: center;
+}
 

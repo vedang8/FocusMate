@@ -4,7 +4,9 @@ const getquotes = async () => {
         const data = await res.json();
         const myquote = document.querySelector("#myquote");
         myquote.innerHTML = data.content;
-    } catch (error) {}
+    } catch (error) {
+        console.log("error", error);
+    }
 };
 
 window.addEventListener("load", () => {
