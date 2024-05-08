@@ -5,19 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FocusMate</title>
     <link rel="stylesheet" href="popup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                🎯Focus <span> Mate </span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-grid-alt"></i>
+                    <span class="nav-item"> Dashboard</span>
+                </a>
+                <span class="tooltip"> Dahboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-laptop"></i>
+                    <span class="nav-item"> Work Sessions</span>
+                </a>
+                <span class="tooltip"> Work Sessions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-block"></i>
+                    <span class="nav-item"> Website Blocking</span>
+                </a>
+                <span class="tooltip"> Website Blocking</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-time-five"></i>
+                    <span class="nav-item"> Pomodoro</span>
+                </a>
+                <span class="tooltip"> Pomodoro</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-edit"></i>
+                    <span class="nav-item"> To-Do List</span>
+                </a>
+                <span class="tooltip"> To-Do List</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-signal-5"></i>
+                    <span class="nav-item"> Progress</span>
+                </a>
+                <span class="tooltip"> Progress</span>
+            </li>
+        </ul>
+    </div>
     <div class="container">
-        <h1>🎯Focus <span>Mate</span></h1>
+        <!--<h1>🎯Focus <span>Mate</span></h1> -->
         <div id="quote-container">
             <p id="myquote"></p>
         </div>
-        <div id="functionality-buttons">
+        <!-- <div id="functionality-buttons">
             <button id="start-session-btn">Start Work Session</button>
             <button id="manage-todo-btn">Manage To-Do List</button>
         </div>
-        <div id="loader"></div> <!-- Loader element -->
-        <div id="overlay"></div>
+        <div id="loader"></div> Loader element -->
+        <div id="overlay"></div> 
     </div>
     <script src="popup.js"></script>
 </body>
