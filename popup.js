@@ -13,12 +13,14 @@ window.addEventListener("load", () => {
     getquotes();
 });
 
-let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".sidebar");
-btn.addEventListener("click", function(){
-    sidebar.classList.toggle('active');
-});
+document.addEventListener('DOMContentLoaded', function(){
+    const websiteBlocking = document.getElementById('websiteBlocking');
 
+    websiteBlocking.addEventListener('click', function(event){
+        event.preventDefault();
+        window.location.href = "website_blocking.html";
+    });
+});
 
 
 
