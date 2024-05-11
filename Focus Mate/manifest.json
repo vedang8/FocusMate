@@ -5,16 +5,15 @@
     "description": "A productivity Chrome extension to help users stay focused while working online.",
     "permissions": ["storage", "webRequest", "declarativeNetRequest"],
     "background": {
-      "service_worker": "background.js"
+      "service_worker": "JS/background.js"
     },
     "action": {
-        
-      "default_popup": "popup.html",
+      "default_popup": "HTML/popup.html",
       "default_icon": {
-        "128": "images/focus_mate.png"
+        "128": "assets/images/focus_mate.png"
       }
     },
     "icons": {
-      "128": "images/focus_mate.png"
+      "128": "assets/images/focus_mate.png"
     }
 }
