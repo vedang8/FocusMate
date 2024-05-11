@@ -32,6 +32,11 @@ pomodoro.addEventListener("click", function (event) {
 	
 });
 
+const todoListIcon = document.querySelector("#todoList");
+todoListIcon.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "../HTML/todo_list.html";
+});
 
 
 
