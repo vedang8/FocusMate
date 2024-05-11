@@ -55,10 +55,10 @@
             <div class="card-header">
                 <h1>Pomodoro Timer</h1>
                 <div class="card-header-buttons">
-                    <button id="buttonTypePomodoro" class="active">
+                    <button id="buttonTypePomodoro" class="active" >
                         Pomodoro
                     </button>
-                    <button id="buttonTypeShortBreak">Short Break</button>
+                    <button id="buttonTypeShortBreak" >Short Break</button>
                 </div>
                 <div class="card-body">
                     <div id="circularProgressBar" class="progress-bar">
@@ -70,13 +70,14 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn-success">Start</button>
-                    <button class="btn-danger">Stop</button>
+                    <button class="btn-success" onClick="startTimer()">Start</button>
+                    <button class="btn-danger" onClick="stopTimer()">Stop</button>
                     <button>Reset</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="../JS/popup.js"></script>
+    <script src="../JS/pomodoro.js"></script>
 </body>
 </html>

@@ -13,30 +13,25 @@ window.addEventListener("load", () => {
   getquotes();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const websiteBlocking = document.getElementById("websiteBlocking");
-  websiteBlocking.addEventListener("click", function (event) {
-    event.preventDefault();
-    window.location.href = "website_blocking.html";
-  });
-});
-
-const home = document.getElementById("home");
+const home = document.querySelector("#home");
 home.addEventListener("click", function (event) {
   event.preventDefault();
-  window.location.href = "popup.html";
+  window.location.href = "../HTML/popup.html";
 });
 
 
 /*  Pomodoro */
-const pomodoro = document.getElementById("pomodoro");
+const pomodoro = document.querySelector("#pomodoro");
 pomodoro.addEventListener("click", function (event) {
-	event.preventDefault();
-	window.location.href = "pomodoro.html";
+  try{
+    event.preventDefault();
+    window.location.href = "../HTML/pomodoro.html";
+  }catch(error){
+    console.log('error', error);
+  }
+	
 });
 
-const circularProgressBar = document.querySelector('#circularProgressBar');
-const circularProgressBarNumber = document.querySelector('#circularProgressBar .progress-value')
 
 
 
