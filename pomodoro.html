@@ -8,7 +8,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
     <div class="nav-container">
         <input type="checkbox" id="click">
         <label for="click">
@@ -30,11 +29,11 @@
                         <i class="bx bx-laptop" id="laptop"></i>
                         <a href="#">Working Session</a>
                     </li>
-                    <li class="active">
+                    <li class>
                         <i class="bx bx-block"></i>
                         <a href="#">Website Blocking</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <i class="bx bx-time-five"></i>
                         <a href="#">Pomodoro</a>
                     </li>
@@ -51,7 +50,31 @@
         </div>
     </div>
     <div class="container">
-        
+        <div class="card">
+            <div class="card-header">
+                <h1>Pomodoro Timer</h1>
+                <div class="card-header-buttons">
+                    <button id="buttonTypePomodoro" class="active">
+                        Pomodoro
+                    </button>
+                    <button id="buttonTypeShortBreak">Short Break</button>
+                </div>
+                <div class="card-body">
+                    <div id="circularProgressBar" class="progress-bar">
+                        <div class="progress-bar-inner">
+                            <h2 class="progress-value">
+                                25:00
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-success">Start</button>
+                    <button class="btn-danger">Stop</button>
+                    <button>Reset</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>
