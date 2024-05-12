@@ -51,7 +51,7 @@ input{
     border:none;
     padding:10px;
     background: transparent;
-    font-weight: 15px;
+    font-weight: 20px;
     color:#510a34;
     font-size: 14px;
 }
@@ -80,13 +80,60 @@ button:hover{
     opacity: 0.7;
 }
 
-ul li{
-    margin-left: 70px;
+ul#list-container li {
+    margin-left: 80px;
     list-style: none;
-    font-size: 17px;
+    font-size: 20px;
     padding: 12px 8px 12px 50px;
-    user-select:none;
+    user-select: none;
     cursor: pointer;
     position: relative;
+    color:#591231;
+    border-radius: 30px;
+    margin-right: 50px;
 }
+
+ul#list-container li::before {
+    content: ''; /* No content */
+    display: inline-block;
+    width: 12px; /* Adjust size as needed */
+    height: 12px; /* Adjust size as needed */
+    border: 2px solid #f209a4; /* Border for unfilled circle */
+    border-radius: 50%; /* Make it a circle */
+    margin-left: -10px; /* Move symbol to the left of the list item */
+    position: absolute; /* Position relative to the list item */
+    left: 30px; /* Align with the beginning of the list item */
+    top: 55%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+ul#list-container li.checked {
+    color: #650952;
+    text-decoration: line-through;
+}
+
+ul#list-container li.checked::before {
+    content: '\2713'; /* Unicode character for checkmark */
+    top: 55%;
+}
+
+ul li span{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#89073f;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #f14be0;
+    color:#f3e1ec;
+}
+
+
 
