@@ -16,7 +16,6 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: auto;
-    z-index: -1;
     flex-grow: 1;
     align-items: center;
 }
