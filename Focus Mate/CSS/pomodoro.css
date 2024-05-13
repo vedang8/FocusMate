@@ -63,11 +63,13 @@ h1 {
     font-size: 20px;
     background-color: #eca3cf;
     color:#67032f;
+    cursor: pointer;
 }
 
 .card-header-buttons .active{
     background-color: #b52756;
-    color:#e7d3f1
+    color:#e7d3f1;
+    cursor: pointer;
 }
 
 .card-body{
@@ -91,7 +93,6 @@ h1 {
     box-shadow: #b52756 0px 0px 0px 2px,
     #e8759b 0px 4px 6px -1px,
     #e452a5 0px 1px 0px inset;; 
-
 }   
 
 .progress-bar-inner{
