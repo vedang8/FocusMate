@@ -3,7 +3,7 @@
     "name": "FocusMate",
     "version": "1.0",
     "description": "A productivity Chrome extension to help users stay focused while working online.",
-    "permissions": ["storage", "webRequest", "declarativeNetRequest"],
+    "permissions": ["storage", "webRequest", "declarativeNetRequest", "tabs"],
     "background": {
       "service_worker": "JS/background.js"
     },

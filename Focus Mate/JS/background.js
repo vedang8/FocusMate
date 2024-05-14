@@ -1,15 +1,3 @@
-// Define variables for timer state
-let progressInterval;
-let timerValue;
-let pomodoroType;
-let multiplierFactor;
-let audio = new Audio('../assets/audio/alarm.mp3');
-
-// Define constants for timer values
-const pomodoroTimerInSeconds = 1500; // 60 seconds * 25 minutes
-const shortBreakTimerInSeconds = 300; // 60 seconds * 5 minutes
-const TIMER_TYPE_POMODORO = 'POMODORO';
-const TIMER_TYPE_SHORT_BREAK = 'SHORTBREAK';
 
 // Listen for messages from the popup script
 chrome.runtime.onMessage.addListener((message) => {
@@ -35,6 +23,7 @@ chrome.runtime.onMessage.addListener((message) => {
 });
 
 /* Start Timer */
+/* Start Timer */
 const startTimer = () => {
     console.log("start");
     progressInterval = setInterval(() => {
@@ -42,6 +31,8 @@ const startTimer = () => {
             stopTimer();
         timerValue--;
         setInfoCircularProgressBar();
+        // Update local storage with the updated timer value
+        chrome.storage.local.set({ "timerValue": timerValue });
     }, 1000);
 }
 
@@ -98,3 +89,10 @@ document.getElementById("stop-btn").addEventListener("click", stopTimer);
 document.getElementById("reset-btn").addEventListener("click", resetTimer);
 document.getElementById("buttonTypePomodoro").addEventListener("click", () => setPomodoroType(TIMER_TYPE_POMODORO));
 document.getElementById("buttonTypeShortBreak").addEventListener("click", () => setPomodoroType(TIMER_TYPE_SHORT_BREAK));
+
+
+
+
+
+
+

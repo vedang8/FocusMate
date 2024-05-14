@@ -39,6 +39,12 @@ todoListIcon.addEventListener("click", function (event) {
 });
 
 
+const performance = document.querySelector("#progress");
+performance.addEventListener("click", function(event){
+    event.preventDefault();
+    window.location.href = "../HTML/performance.html";
+});
+
 
 
 

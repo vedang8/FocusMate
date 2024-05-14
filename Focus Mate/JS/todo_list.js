@@ -31,10 +31,12 @@ document.getElementById("add-task-btn").addEventListener("click", function(){
    addTask();
 });
 
+let totalTasks = 0;
 function addTask(){
     if(inputBox.value === ''){
         alert("You must write something!");
     }else{
+        totalTasks++;
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
@@ -46,10 +48,12 @@ function addTask(){
     saveData();
 }
 
+let completedTasks = 0;
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
         saveData();
+        completedTasks++;
     }else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         saveData();
@@ -65,3 +69,27 @@ function showTask(){
 }
 
 showTask();
+
+
+// Calculate the total number of tasks added and completed (replace with actual data)
+const totalTasksAdded = totalTasks; //localStorage.getItem("totalTasksAdded") || 0;
+const totalTasksCompleted = completedTasks; //localStorage.getItem("totalTasksCompleted") || 0;
+
+// Calculate the percentage of tasks completed
+const percentageCompleted = (totalTasksCompleted / totalTasksAdded) * 100;
+
+// Chart.js configuration
+const ctx = document.getElementById('performanceChart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Completed Tasks', 'Pending Tasks'],
+        datasets: [{
+            data: [totalTasksCompleted, totalTasksAdded - totalTasksCompleted],
+            backgroundColor: ['#36a2eb', '#ff6384']
+        }]
+    },
+    options: {
+        responsive: true
+    }
+});
