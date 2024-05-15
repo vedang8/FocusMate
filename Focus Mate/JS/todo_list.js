@@ -78,18 +78,3 @@ const totalTasksCompleted = completedTasks; //localStorage.getItem("totalTasksCo
 // Calculate the percentage of tasks completed
 const percentageCompleted = (totalTasksCompleted / totalTasksAdded) * 100;
 
-// Chart.js configuration
-const ctx = document.getElementById('performanceChart').getContext('2d');
-const chart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Completed Tasks', 'Pending Tasks'],
-        datasets: [{
-            data: [totalTasksCompleted, totalTasksAdded - totalTasksCompleted],
-            backgroundColor: ['#36a2eb', '#ff6384']
-        }]
-    },
-    options: {
-        responsive: true
-    }
-});
